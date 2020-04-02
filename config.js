@@ -21,9 +21,7 @@ module.exports = class logConfig
     getDefaultConfig()
     {
       return {
-		context:"",  
-		attach:{  },
-		 
+		context:"",   
       }
     }
 }

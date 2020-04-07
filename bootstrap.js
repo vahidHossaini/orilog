@@ -3,15 +3,16 @@ module.exports = class logBootstrap{
   {
     this.funcs=[
       {
-          name:'sampleFunction',
-          title:'this is sample' ,
-          inputs:[
-			{
-				name:'user',
-				type:'UserInterface',
-				nullable:false
-			}
-          ]
+          name:'tagLog', 
+      }, 
+      {
+          name:'domainResponse', 
+      }, 
+      {
+          name:'domainLog', 
+      }, 
+      {
+          name:'fileLog', 
       }, 
 	  
 	  

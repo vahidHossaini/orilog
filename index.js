@@ -1,5 +1,5 @@
 var uuid=require("uuid");
-var fs;
+var fs=require('fs');
 class LogRouting
 {
 	constructor(disc)
@@ -16,8 +16,7 @@ class LogRouting
     }
 	domainResponse(domain,service,id,response)
     {
-        
-		 this.disc.run('log','domainResponse',{id,response,domain,service},()=>{});
+		this.disc.run('log','domainResponse',{id,response,domain,service},()=>{});
         return   
     }
 	domainLog(domain,service,session,data)
@@ -35,7 +34,7 @@ module.exports = class logIndex
 		this.context=this.config.context 
 		if(this.config.fileData)
 		{
-			fs=require('fs');
+			
 			this.fileData=this.config.fileData;
 		}
 		this.accepted={};
